@@ -38,7 +38,7 @@ community | Community string defined on the device
 
 Example:
 ```YAML
-default:
+some_module:
   version: 2
   auth:
     community: SomeCommunityString
@@ -60,7 +60,7 @@ community | Community string defined on the device
 
 Example:
 ````YAML
-default:
+some_module:
   version: 1
   auth:
     community: SomeCommunityString
@@ -92,7 +92,7 @@ Security_level has 3 settings:
 
 Example:
 ```YAML
-default:
+some_module:
   version: 3
   auth:
     username: SomeUser
@@ -121,7 +121,7 @@ scrape_configs:
         - 192.168.1.2  # SNMP device.
     metrics_path: /snmp
     params:
-      module: [default]
+      module: [interfaces]
     relabel_configs:
       - source_labels: [__address__]
         target_label: __param_target
